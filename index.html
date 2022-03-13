@@ -1,0 +1,795 @@
+<!-- PC區塊_主視覺開始 -->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta charset="UTF-8" />
+<!-- <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+<script>
+$(document).ready(function(){
+  $("#backtop").click(function () {
+	  // $(window).scrollTop(0);
+	  $("html,body").animate({ scrollTop: 0 }, 800);
+  });
+});
+</script>
+<!-- 活動樣式開始 -->
+<style>
+/* =============================================================================================================
+..................................................vspc_區塊....................................................
+==============================================================================================================*/
+:focus { outline: 0; }
+* { margin: 0; padding: 0; -webkit-text-size-adjust: none; list-style: none; }
+img { border: 0; }
+html, body { min-width: 0; height: auto; background-image: none; background-repeat: no-repeat; background-position: center top; background-color: #e9e9eb;/* background-position: center 182px; *//* 套HEADER時需要打開 */ }
+.vspc p { margin:0;}
+/* 視覺左上角活動LOGO_樣式*/
+.LOGO { width:1190px; margin:0 auto; position:relative;}
+.udnLOGO { display: block; z-index: 700; position: absolute; width: calc(139/1190*100%);
+left: calc(40/1190*100%); left:50%;
+top: 20px; margin-left:-555px; }
+.udnLOGO span { display: block; width: 100%; height: 0; background-size: 100% auto; padding-bottom: calc(293/797*100%);/* 若用第4、5底色logo，改成calc(360/797*100%) */
+background-image: url(https://img.udn.com/art/2019_logo/images/new_udnlogo_02.svg); }
+/* ------GO TOP------ */
+.goTop { position: fixed; right: 10px; bottom: 10px; z-index:999;  padding: 10px; border-radius: 50%; overflow: hidden; background-color: #515151; cursor: pointer; }
+.goTop span { display: block; width: 30px; text-align: center; }
+.goTop span i { display: block; padding-bottom: 30px; }
+.goTop:hover { filter: brightness(120%); }
+.fa-angle-up { background-image: url(images/icon-fa-angle-up.png); background-size: 100% auto; }
+/* --------------------------- */
+.vspc { width: 100%; height: auto; overflow: hidden; background:url(images/BGBG.gif) left top repeat; }
+.vspc * { font-family:"微軟正黑體", "Microsoft JhengHei UI Light", "Microsoft JhengHei UI"; font-size:18px; text-align:center; line-height:1.8em; color:rgba(0,0,0,1);}
+/* TOP--------------------------- */
+.vspc .main { width: 100%; height: auto; min-width:1190px; margin: 0 auto; position: relative; z-index: 5; background-image:url(images/TITLE_WBG.jpg); background-position:center top; background-repeat:no-repeat; }
+.vspc .main .TOP { width: 1190px; height: 900px; margin:0 auto; position: relative; z-index: 10; margin-bottom:-180px;}
+.vspc .main .TOP .TITLE_M,
+.vspc .main .TOP .TITLE_W { width:100%;}
+.vspc .main .TOP .TITLE_M { display:none;}
+.vspc .main .TOP .TITLE_W { padding-top:77px;}
+.vspc .main .TOP .TITLE_M span,
+.vspc .main .TOP .TITLE_W span { display:block; width:100%;}
+.vspc .main .TOP .TEXT { padding-top:20px;}
+.vspc .main .TOP .TEXT p { text-align:center;}
+.vspc .main .TOP .TEXT p strong { font-size:24px; line-height:2.4em; font-weight:bold;}
+/* BOX--------------------------- */
+.vspc .main .BOXBG { width:100%;}
+/* BOX01--------------------------- */
+.vspc .main .BOX01 { background-image:url(images/BOX1_BG.jpg); background-position:center 180px; background-repeat:no-repeat;}
+.vspc .main .BOX01 > div { width:1190px; box-sizing:border-box; padding:20px; margin:0 auto; background-color:rgba(255,255,255,1); border-radius:20px; box-shadow:0 0 7px 2px rgba(173,158,150,.15); margin-bottom:-180px; position:relative; z-index:5;}
+.vspc .main .BOX01 > div > div { width:100%; margin-bottom:60px;}
+.vspc .main .BOX01 > div > div:after { content:""; display:block; width:100%; height:0; clear:both;}
+
+.vspc .main .BOX01 > div > div .IMG { width:662px; position:relative;}
+.vspc .main .BOX01 > div > div:nth-child(odd) .IMG { float:right;}
+.vspc .main .BOX01 > div > div:nth-child(even) .IMG { float:left;}
+.vspc .main .BOX01 > div > div .IMG:before { content:""; display:block; width:662px; height:520px; border-radius:0 200px 0 200px; position:absolute; top:10px; left:10px;}
+.vspc .main .BOX01 > div > div:nth-child(3n-2) .IMG:before { background-color:rgba(255,232,202,1); }
+.vspc .main .BOX01 > div > div:nth-child(3n-1) .IMG:before { background-color:rgba(190,255,248,1); }
+.vspc .main .BOX01 > div > div:nth-child(3n) .IMG:before { background-color:rgba(255,246,206,1); }
+.vspc .main .BOX01 > div > div .IMG span { display:block; width:100%; overflow:hidden; border-radius:0 200px 0 200px; position:relative; z-index:5;}
+.vspc .main .BOX01 > div > div .IMG span img { display:block; width:100%; height:auto;}
+
+.vspc .main .BOX01 > div > div .TITLE { width:468px; padding-top:150px; padding-bottom:20px; margin-bottom:30px; position:relative;}
+.vspc .main .BOX01 > div > div:nth-child(odd) .TITLE { text-align:right; float:left;}
+.vspc .main .BOX01 > div > div:nth-child(even) .TITLE { text-align:left; float:right;}
+
+.vspc .main .BOX01 > div > div .TITLE i { display:block; width:560px; height:42px; background-repeat:no-repeat; background-position:left bottom; position:absolute; left:0; bottom:0;}
+.vspc .main .BOX01 > div > div:nth-child(even) .TITLE i { background-position:right bottom; left:auto; right:0; }
+.vspc .main .BOX01 > div .P01 .TITLE i { background-image:url(images/BOX01_DE01.png);}
+.vspc .main .BOX01 > div .P02 .TITLE i { background-image:url(images/BOX01_DE02.png);}
+.vspc .main .BOX01 > div .P03 .TITLE i { background-image:url(images/BOX01_DE03.png);}
+.vspc .main .BOX01 > div .P04 .TITLE i { background-image:url(images/BOX01_DE04.png);}
+.vspc .main .BOX01 > div .P05 .TITLE i { background-image:url(images/BOX01_DE05.png);}
+.vspc .main .BOX01 > div > div .TITLE h6 { display:inline-block; width:150px; height:100px; background-position:right bottom; background-repeat:no-repeat; position:relative; z-index:5;}
+.vspc .main .BOX01 > div .P01 .TITLE h6 { background-image:url(images/BOX01_NO01.png);}
+.vspc .main .BOX01 > div .P02 .TITLE h6 { background-image:url(images/BOX01_NO02.png);}
+.vspc .main .BOX01 > div .P03 .TITLE h6 { background-image:url(images/BOX01_NO03.png);}
+.vspc .main .BOX01 > div .P04 .TITLE h6 { background-image:url(images/BOX01_NO04.png);}
+.vspc .main .BOX01 > div .P05 .TITLE h6 { background-image:url(images/BOX01_NO05.png);}
+.vspc .main .BOX01 > div > div .TITLE span { display:inline-block; font-size:48px; line-height:1.3em; text-align:right; position:relative; z-index:5;}
+.vspc .main .BOX01 > div > div .TITLE span.WP {}
+.vspc .main .BOX01 > div > div .TITLE span.MP { display:none;} 
+
+.vspc .main .BOX01 > div > div .TEXT { width:468px;}
+.vspc .main .BOX01 > div > div:nth-child(odd) .TEXT { float:left;}
+.vspc .main .BOX01 > div > div:nth-child(even) .TEXT { float:right;}
+.vspc .main .BOX01 > div > div .TEXT p { text-align:left;text-align: justify;}
+
+.vspc .main .BOX01 > div .PS { box-sizing:border-box; padding:0 110px; padding-top:40px; margin-bottom:40px; position:relative;}
+.vspc .main .BOX01 > div .PS:before { content:""; display:block; width:100px; border-top:2px solid rgba(142,134,126,1); position:absolute; left:50%; margin-left:-50px; top:0;}
+.vspc .main .BOX01 > div .PS .IMG { width:118px;}
+.vspc .main .BOX01 > div .PS .IMG:before { display:none;}
+.vspc .main .BOX01 > div .PS .IMG span { display:block; width:100%; height:0; padding-bottom:calc(97/118*100%); background-image:url(images/BOX01_PS01.png); background-size:100% auto; background-position:center top; background-repeat:no-repeat; border-radius:0;}
+.vspc .main .BOX01 > div .PS .TEXT { width:auto; padding-top:11px;}
+.vspc .main .BOX01 > div .PS .TEXT p { font-size:24px; color:rgba(89,76,59,1);}
+
+/* BOX02、BOX04、BOX06--------------------------- */
+.vspc .main .BOX02 .PS hr,
+.vspc .main .BOX04 .PS hr,
+.vspc .main .BOX06 .PS hr { display:inline-block; border:none; width:37px; margin-bottom:20px;}
+.vspc .main .BOX02 .PS hr:before,
+.vspc .main .BOX04 .PS hr:before,
+.vspc .main .BOX06 .PS hr:before { content:""; display:block; width:100%; height:0; padding-bottom:calc(30/37*100%);} 
+
+.vspc .main .BOX02 { background-color:rgba(237,178,159,1); padding-top:260px; padding-bottom:60px;}
+.vspc .main .BOX02 .PS hr:before { background-image:url(images/ICON_Seg_W.png);}
+.vspc .main .BOX02 .PS .TEXT P,
+.vspc .main .BOX02 .PS .TEXT P strong { font-size:24px; color:rgba(255,255,255,1); font-weight:bold; text-align:center;}
+.vspc .main .BOX02 .PS .TEXT P strong { color:rgba(255,247,211,1);}
+
+.vspc .main .BOX04 { background-color:rgba(255,233,203,1); padding-top:60px; padding-bottom:240px; margin-bottom:-180px;}
+.vspc .main .BOX04 .PS hr:before { background-image:url(images/ICON_Seg_O.png);}
+.vspc .main .BOX04 .PS .TEXT P,
+.vspc .main .BOX04 .PS .TEXT P span,
+.vspc .main .BOX04 .PS .TEXT P strong { font-size:24px; color:rgba(223,140,115,1); font-weight:bold; text-align:center;}
+.vspc .main .BOX04 .PS .TEXT P strong { color:rgba(89,76,59,1);}
+.vspc .main .BOX04 .PS .TEXT P i { display:inline-block; border-top:1px solid rgba(223,140,115,1); width:5em; height:.5em; margin:0 .5em;}
+
+.vspc .main .BOX06 { height:953px; box-sizing:border-box; background-image:url(images/BOX06_BG.jpg); background-position:center top;  background-repeat:no-repeat; padding-top:80px;}
+.vspc .main .BOX06 .PS .IMG span,
+.vspc .main .BOX06 .PS .IMG span img { display:block;}
+.vspc .main .BOX06 .PS .IMG span {}
+.vspc .main .BOX06 .PS .IMG span img {}
+.vspc .main .BOX06 .PS hr:before { background-image:url(images/ICON_Seg_C.png);}
+.vspc .main .BOX06 .PS .TITLE { margin-bottom:80px;}
+.vspc .main .BOX06 .PS .TITLE span,
+.vspc .main .BOX06 .PS .TITLE span strong { font-size:48px; font-weight:bold; text-align:center;}
+.vspc .main .BOX06 .PS .TITLE span { color:rgba(223,140,115,1);}
+.vspc .main .BOX06 .PS .TITLE span strong { color:rgba(139,99,79,1);}
+.vspc .main .BOX06 .PS .TITLE span { font-size:48px; color:rgba(223,140,115,1); font-weight:bold;}
+.vspc .main .BOX06 .PS .TITLE span.MP { display:none;}
+.vspc .main .BOX06 .PS .TITLE span.WP { display:inline-block;}
+.vspc .main .BOX06 .PS .TEXT { position:relative; padding-top:20px;}
+.vspc .main .BOX06 .PS .TEXT:before { content:""; display:block; width:100px; border-top:2px solid rgba(142,134,126,1); position:absolute; left:50%; margin-left:-50px; top:0;}
+.vspc .main .BOX06 .PS .TEXT P,
+.vspc .main .BOX06 .PS .TEXT P strong { font-size:24px; color:rgba(89,76,59,1); text-align:center;}
+.vspc .main .BOX06 .PS .TEXT P strong { font-weight:bold; font-size:30px;}
+
+/* BOX03--------------------------- */
+.vspc .main .BOX03 { padding-top:60px;}
+.vspc .main .BOX03 > div { width:1190px; height:670px; margin:0 auto; position:relative; margin-bottom:80px;}
+.vspc .main .BOX03 > div > div,
+.vspc .main .BOX03 > div:after,
+.vspc .main .BOX03 > div .PS:before,
+.vspc .main .BOX03 > div .PS:after { position:absolute;}
+.vspc .main .BOX03 > div:after { content:""; display:block; width:282px; height:15px; background-image:url(images/BOX03_PS05.png); left:50%; margin-left:-141px; bottom:0;}
+.vspc .main .BOX03 > div .PS { width:490px; height:450px; background-image:url(images/BOX03_PS01.jpg); background-size:100% 100%; left:-20px; top:-35px;}
+.vspc .main .BOX03 > div .PS:before,
+.vspc .main .BOX03 > div .PS:after { content:""; display:block; background-image:url(images/BOX03_PS04.png); background-size:100% 100%;}
+.vspc .main .BOX03 > div .PS:before { width:300px; height:300px; left:-150px; bottom:-200px;}
+.vspc .main .BOX03 > div .PS:after { display:none;}
+.vspc .main .BOX03 > div .IMG { width:410px; height:630px; padding:20px; background-color:rgba(255,255,255,1); left:37px;}
+.vspc .main .BOX03 > div .IMG span { display:block; overflow:hidden; width:100%;}
+.vspc .main .BOX03 > div .IMG span img { width:100%;}
+.vspc .main .BOX03 > div .IMG span img.WP { display:block;}
+.vspc .main .BOX03 > div .IMG span img.MP { display:none;}
+.vspc .main .BOX03 > div .TBOX { width:685px; height:590px; box-sizing:border-box; padding:60px 80px 0 50px; background-color:rgba(255,255,255,.65); background-position:30px 30px; background-repeat:no-repeat; right:20px; top:40px;}
+.vspc .main .BOX03 .P01 .TBOX { background-image:url(images/BOX03_DE01.png);}
+.vspc .main .BOX03 .P02 .TBOX { background-image:url(images/BOX03_DE02.png);}
+.vspc .main .BOX03 .P03 .TBOX { background-image:url(images/BOX03_DE03.png);}
+.vspc .main .BOX03 .P04 .TBOX { background-image:url(images/BOX03_DE04.png);}
+.vspc .main .BOX03 .P05 .TBOX { background-image:url(images/BOX03_DE05.png);}
+.vspc .main .BOX03 .P06 .TBOX { background-image:url(images/BOX03_DE06.png);}
+.vspc .main .BOX03 .P07 .TBOX { background-image:url(images/BOX03_DE07.png);}
+.vspc .main .BOX03 > div .TBOX * { text-align:left;}
+.vspc .main .BOX03 > div .TBOX .TITLE {}
+.vspc .main .BOX03 > div .TBOX .TITLE span { font-size:48px; font-weight:bold; color:rgba(89,76,59,1);}
+.vspc .main .BOX03 > div .TBOX .TEXT01 p { margin-bottom:20px;}
+.vspc .main .BOX03 > div .TBOX .STAR { margin-bottom:20px;}
+.vspc .main .BOX03 > div .TBOX .STAR h6,
+.vspc .main .BOX03 > div .TBOX .STAR ul { display:inline-block; text-align:left;}
+.vspc .main .BOX03 > div .TBOX .STAR h6,
+.vspc .main .BOX03 > div .TBOX .STAR ul,
+.vspc .main .BOX03 > div .TBOX .STAR ul li { vertical-align:middle;}
+.vspc .main .BOX03 > div .TBOX .STAR ul li { display:inline-block; width:26px;}
+.vspc .main .BOX03 > div .TBOX .STAR ul li span { display:block; width:100%; height:0; padding-bottom:calc(300/310*100%); background-image:url(images/STAR_0.png); background-size:100% auto; background-repeat:no-repeat;}
+.vspc .main .BOX03 > div .TBOX .STAR ul li.S01 span { background-image:url(images/STAR_1.png);}
+.vspc .main .BOX03 > div .TBOX .STAR ul li.S02 span { background-image:url(images/STAR_2.png);}
+.vspc .main .BOX03 > div .TBOX .TEXT02 { position:relative;}
+.vspc .main .BOX03 > div .TBOX .TEXT02:before,
+.vspc .main .BOX03 > div .TBOX .TEXT02:after { content:""; display:block; border-top:1px solid rgba(223,140,115,1); position:absolute; right:0;}
+.vspc .main .BOX03 > div .TBOX .TEXT02:before { width:55%; top:30px;}
+.vspc .main .BOX03 > div .TBOX .TEXT02:after { width:100%; bottom:0;}
+.vspc .main .BOX03 > div .TBOX .TEXT02 h6 { width:220px;}
+.vspc .main .BOX03 > div .TBOX .TEXT02 h6:before { content:""; display:block; width:100%; height:0; padding-bottom:calc(70/220*100%); background-image:url(images/BOX03_PS06.png); background-size:100% auto;}
+.vspc .main .BOX03 > div .TBOX .TEXT02 p { padding:10px 0;}
+.vspc .main .BOX03 > div .CTA { right:100px; bottom:12px;}
+.vspc .main .CTA a { display:block; text-decoration:none; color:rgba(255,255,255,1); font-weight:bold; background-color:rgba(223,140,115,1); padding:15px 60px;}
+.vspc .main .CTA a:after { content:""; display:inline-block; width:30px; height:15px; background-image:url(images/ICON_CTA.png); background-size:auto 100%; background-position:center top; background-repeat:no-repeat; vertical-align:middle; position:relative; top:-2px;}
+.vspc .main .CTA a:hover:after { background-position:right top;}
+.vspc .main .BOX03 > div:nth-child(even) .PS { width:490px; height:625px; left:auto; right:-28px; top:55px;}
+.vspc .main .BOX03 > div:nth-child(even) .PS:before { width:220px; height:220px; left:auto; bottom:auto; right:-60px; top:-120px;}
+.vspc .main .BOX03 > div:nth-child(even) .PS:after { display:block; width:100px; height:100px; right:-50px; bottom:-35px;}
+.vspc .main .BOX03 > div:nth-child(even) .IMG { left:auto; right:37px;}
+.vspc .main .BOX03 > div:nth-child(even) .TBOX { padding:60px 50px 0 80px; right:auto; left:20px;}
+.vspc .main .BOX03 > div:nth-child(even) .CTA { right:auto; left:100px;}
+.vspc .main .BOX03 > div:nth-child(3n-1) .PS { background-image:url(images/BOX03_PS02.jpg);}
+.vspc .main .BOX03 > div:nth-child(3n) .PS { background-image:url(images/BOX03_PS03.jpg);}
+
+/* BOX05--------------------------- */
+.vspc .main .BOX05 { background-image:url(images/BOX5_BG.jpg); background-position:center 180px; background-repeat:no-repeat; padding-bottom:20px;}
+.vspc .main .BOX05 > div { width:1150px; height:480px; overflow:hidden; margin:0 auto; position:relative; margin-bottom:20px;}
+.vspc .main .BOX05 > div .IMG { width:50%; overflow:hidden; border-radius:0 0 50px 0; float:right;}
+.vspc .main .BOX05 > div .IMG span,
+.vspc .main .BOX05 > div .IMG span img { display:block; width:100%; height:auto;}
+.vspc .main .BOX05 > div .IMG span { position:relative;}
+.vspc .main .BOX05 > div .IMG span:after { content:""; display:block; box-sizing:border-box; border:1px solid rgba(255,255,255,1); width:calc(100% - 40px); height:calc(100% - 40px); border-radius:0 0 50px 0; position:absolute; left:20px; top:20px;}
+.vspc .main .BOX05 > div .TBOX { width:calc(50% + 20px); height:calc(100% - 40px); box-sizing:border-box; padding:50px; background-color:rgba(255,255,255,1); background-image:url(images/BOX05_DE01.jpg); background-position:left top; background-repeat:no-repeat; border:1px solid rgba(255,255,255,1); position:absolute; left:0; top:20px;}
+.vspc .main .BOX05 > div .TBOX .TITLE {}
+.vspc .main .BOX05 > div .TBOX .TITLE span { font-size:36px; letter-spacing:2px; color:rgba(89,76,59,1);}
+.vspc .main .BOX05 > div .TBOX .SUBTITLE { margin-bottom:1em;}
+.vspc .main .BOX05 > div .TBOX .SUBTITLE span { letter-spacing:10px; color:rgba(223,140,115,1);}
+
+.vspc .main .BOX05 > div .TBOX .CTA { position: absolute; left:50%; bottom:20px; transform:translateX(-50%); -webkit-transform:translateX(-50%); -moz-transform:translateX(-50%); -ms-transform:translateX(-50%); -o-transform:translateX(-50%);}
+
+.vspc .main .BOX05 > div:nth-child(even) .IMG { border-radius:0 0 0 50px; float:left;}
+.vspc .main .BOX05 > div:nth-child(even) .IMG span:after { border-radius:0 0 0 50px;}
+.vspc .main .BOX05 > div:nth-child(even) .TBOX { left:auto; right:0;}
+
+
+/* =============================================================================================================
+..................................................mobile_區塊....................................................
+==============================================================================================================*/
+@media screen and (max-width: 640px) {
+body, html, .vspc .main { background-image: none; }
+/* 必須有父層logo才會有作用 */
+.vspc { overflow: inherit; }
+/* 視覺左上角活動LOGO_樣式*/
+.LOGO { width:100%; margin:0 auto; position:relative;}
+.udnLOGO { z-index: 700; position: absolute; width: calc(170/640*100%);
+left: calc(20/640*100%);
+top: 16px; margin-left:0; }
+.udnLOGO span {
+padding-bottom: calc(295/797*100%); background-image: url(https://img.udn.com/art/2019_logo/images/new_udnlogo_02.svg); }
+/* ------GO TOP------ */
+.goTop { right: 2vw; bottom: 2vw;  padding: 2vw; }
+.goTop span { width: 8vw; }
+.goTop span i { padding-bottom: 8vw; }
+/* --------------------------- */
+.vspc * { font-size:3.125vw; line-height:5.5vw;}
+/* TOP--------------------------- */
+.vspc .main { min-width:100%; background-image:url(images/TITLE_MBG.jpg); background-size:100% auto;}
+.vspc .main .TOP { width: 100%; height:140.625vw; margin-bottom:-7.8125vw;}
+.vspc .main .TOP .TITLE_M { display:block; padding-top:4.6875vw;}
+.vspc .main .TOP .TITLE_W { display:none;}
+.vspc .main .TOP .TITLE_M span img { display:block; width:100%;}
+.vspc .main .TOP .TEXT { padding:4.6875vw 3.125vw;}
+.vspc .main .TOP .TEXT p strong { font-size:4.6875vw; line-height:6.25vw;}
+/* BOX01--------------------------- */
+.vspc .main .BOX01 { background-position:center 7.8125vw; background-size:auto 130%; margin:0 auto;}
+.vspc .main .BOX01 > div { width:calc(100% - 6.25vw); padding:3.125vw; border-radius:3.125vw; box-shadow:0 0 1.09375vw 0.3125vw rgba(173,158,150,.15); margin-bottom:-7.8125vw;}
+.vspc .main .BOX01 > div > div { margin-bottom:9vw;}
+
+.vspc .main .BOX01 > div > div .IMG { width:52vw;}
+.vspc .main .BOX01 > div > div .IMG:before { width:52vw; height:41vw; border-radius:0 7.8125vw 0 7.8125vw; top:0.9375vw; left:0.9375vw;}
+.vspc .main .BOX01 > div > div .IMG span { border-radius:0 7.8125vw 0 7.8125vw;}
+.vspc .main .BOX01 > div > div .TITLE { width:31vw; padding-top:22vw; padding-bottom:3vw; margin-bottom:3vw;}
+.vspc .main .BOX01 > div > div.P02 .TITLE {padding-top:14vw;}
+.vspc .main .BOX01 > div > div .TITLE i { width:87.5vw; height:5.8vw; background-size:auto 100%; z-index:20; bottom:auto; top:37vw;}
+.vspc .main .BOX01 > div > div .TITLE h6 { width:15.625vw; height:10.15625vw; background-size:auto 100%;}
+.vspc .main .BOX01 > div > div .TITLE span { font-size:6vw;z-index:40;}
+.vspc .main .BOX01 > div > div .TITLE span.WP { display:none;}
+.vspc .main .BOX01 > div > div .TITLE span.MP { display:inline-block;} 
+.vspc .main .BOX01 > div > div:nth-child(even) .TITLE span { text-align:left;}
+.vspc .main .BOX01 > div > div .TITLE span samp { font-size:2.5vw;}
+.vspc .main .BOX01 > div .P02 .TITLE span b { display:none;}
+.vspc .main .BOX01 > div > div .TEXT { width:100%;}
+.vspc .main .BOX01 > div > div:nth-child(odd) .TEXT,
+.vspc .main .BOX01 > div > div:nth-child(even) .TEXT { float:left;}
+.vspc .main .BOX01 > div .PS { box-sizing:border-box; padding:0; padding-top:0; margin-bottom:6.25vw;}
+.vspc .main .BOX01 > div .PS:before { display:none;}
+.vspc .main .BOX01 > div .PS .IMG,
+.vspc .main .BOX01 > div > div:nth-child(even).PS .IMG { width:17vw; float:none; margin:0 auto;}
+.vspc .main .BOX01 > div .PS .IMG:before { display:none;}
+.vspc .main .BOX01 > div .PS .TEXT { width:auto; padding-top:2.34375vw;}
+.vspc .main .BOX01 > div .PS .TEXT p { font-size:3.75vw; text-align:center; font-weight:bold;}
+
+/* BOX02、BOX04、BOX06--------------------------- */
+.vspc .main .BOX02 .PS,
+.vspc .main .BOX04 .PS,
+.vspc .main .BOX06 .PS { width:calc(100% - 6.25vw); margin:0 auto;}
+.vspc .main .BOX02 .PS hr,
+.vspc .main .BOX04 .PS hr,
+.vspc .main .BOX06 .PS hr { width:5.46875vw; margin-bottom:7vw;}
+.vspc .main .BOX02 .PS hr:before, 
+.vspc .main .BOX04 .PS hr:before, 
+.vspc .main .BOX06 .PS hr:before { background-size:100% auto;}
+.vspc .main .BOX02 .PS .TEXT P,
+.vspc .main .BOX02 .PS .TEXT P strong,
+.vspc .main .BOX04 .PS .TEXT P,
+.vspc .main .BOX04 .PS .TEXT P span,
+.vspc .main .BOX04 .PS .TEXT P strong { font-size:3.75vw;}
+.vspc .main .BOX02 { padding-top:23vw; padding-bottom:17vw;}
+.vspc .main .BOX04 { padding-top:7.8125vw; padding-bottom:14vw; margin-bottom: -7.8125vw;}
+.vspc .main .BOX04 .PS .TEXT P span { display:block;}
+.vspc .main .BOX04 .PS .TEXT P i {width:4.6875vw; height:1vw; margin:0 1.875vw;}
+.vspc .main .BOX06 { height:auto; background-size:auto 100%; padding-top:15.625vw;}
+.vspc .main .BOX06 .PS .TITLE { margin-bottom:10vw;}
+.vspc .main .BOX06 .PS .TITLE span,
+.vspc .main .BOX06 .PS .TITLE span strong,
+.vspc .main .BOX06 .PS .TITLE span { font-size:7.5vw; line-height:10vw;}
+.vspc .main .BOX06 .PS .TITLE span.MP { display:inline-block;}
+.vspc .main .BOX06 .PS .TITLE span.WP { display:none;}
+.vspc .main .BOX06 .PS .TEXT { padding-top:3.125vw; padding-bottom:50vw;}
+.vspc .main .BOX06 .PS .TEXT:before { width:15.625vw; margin-left:-7.8125vw;}
+.vspc .main .BOX06 .PS .TEXT P,
+.vspc .main .BOX06 .PS .TEXT P strong { font-size:3.125vw;}
+.vspc .main .BOX06 .PS .TEXT P strong { font-size:3.75vw;}
+
+/* BOX03--------------------------- */
+.vspc .main .BOX03 { padding-top:7.8125vw;}
+.vspc .main .BOX03 > div { width:calc(100% - 7.8125vw); height:auto; margin-bottom:7.8125vw; padding-top:0.3125vw;}
+.vspc .main .BOX03 > div > div,
+.vspc .main .BOX03 > div:after,
+.vspc .main .BOX03 > div .PS:before,
+.vspc .main .BOX03 > div .PS:after { position:absolute;}
+
+.vspc .main .BOX03 > div:after { display:none;}
+
+.vspc .main .BOX03 > div .PS { width:38.28125vw; height:39.0625vw; left:0; top:0;}
+.vspc .main .BOX03 > div .PS:before,
+.vspc .main .BOX03 > div .PS:after { content:""; display:block; background-image:url(images/BOX03_PS04.png); background-size:100% 100%;}
+.vspc .main .BOX03 > div .PS:before { width:23.4375vw; height:23.4375vw; left:-12vw; bottom:auto; top:24vw;}
+.vspc .main .BOX03 > div .PS:after { display:none;}
+
+.vspc .main .BOX03 > div .IMG,
+.vspc .main .BOX03 > div:nth-child(even) .IMG { width:62.5vw; height:62.5vw; padding:1.5625vw; left:50%; margin-left:-31.25vw; top:3.125vw;}
+.vspc .main .BOX03 > div .IMG span { height:62.5vw;}
+.vspc .main .BOX03 > div .IMG span img.WP { display:none;}
+.vspc .main .BOX03 > div .IMG span img.MP { display:block;}
+.vspc .main .BOX03 > div .IMG span { position:relative;}
+.vspc .main .BOX03 > div .IMG:after { content:""; display:block; position:absolute; background-size:100% auto; background-repeat:no-repeat; right:-7.8125vw; bottom:-4.6875vw;}
+.vspc .main .BOX03 .P01 .IMG:after { background-image:url(images/BOX03_DE01.png); width:36.40625vw; height:18.4375vw;}
+.vspc .main .BOX03 .P02 .IMG:after { background-image:url(images/BOX03_DE02.png); width:50.78125vw; height:18.90625vw;}
+.vspc .main .BOX03 .P03 .IMG:after { background-image:url(images/BOX03_DE03.png); width:49.0625vw; height:24.375vw;}
+.vspc .main .BOX03 .P04 .IMG:after { background-image:url(images/BOX03_DE04.png); width:26.40625vw; height:17.34375vw;}
+.vspc .main .BOX03 .P05 .IMG:after { background-image:url(images/BOX03_DE05.png); width:57.5vw; height:26.71875vw; right:-16vw; bottom:-13vw;}
+.vspc .main .BOX03 .P06 .IMG:after { background-image:url(images/BOX03_DE06.png); width:57.8125vw; height:29.84375vw; right:-16vw; bottom:-13vw;}
+.vspc .main .BOX03 .P07 .IMG:after { background-image:url(images/BOX03_DE07.png); width:38.75vw; height:30.15625vw;}
+.vspc .main .BOX03 > div .TBOX,
+.vspc .main .BOX03 > div:nth-child(even) .TBOX { width:100%; height:auto; padding:0; position:static; right:auto; top:auto; margin:0 auto; overflow:hidden; margin-top:20.3125vw; padding:55vw 3.125vw 12vw 3.125vw;}
+.vspc .main .BOX03 .P01 .TBOX,
+.vspc .main .BOX03 .P02 .TBOX,
+.vspc .main .BOX03 .P03 .TBOX,
+.vspc .main .BOX03 .P04 .TBOX,
+.vspc .main .BOX03 .P05 .TBOX,
+.vspc .main .BOX03 .P06 .TBOX,
+.vspc .main .BOX03 .P07 .TBOX { background-image:none;}
+
+.vspc .main .BOX03 > div .TBOX .TITLE { margin-bottom:3.125vw;}
+.vspc .main .BOX03 > div .TBOX .TITLE span { font-size:7.5vw;}
+.vspc .main .BOX03 > div .TBOX .TEXT01 p { margin-bottom:3.125vw;}
+.vspc .main .BOX03 > div .TBOX .STAR { margin-bottom:3.125vw;}
+.vspc .main .BOX03 > div .TBOX .STAR ul li { width:4.0625vw;}
+.vspc .main .BOX03 > div .TBOX .TEXT02:before,
+.vspc .main .BOX03 > div .TBOX .TEXT02:after { display:none;}
+.vspc .main .BOX03 > div .TBOX .TEXT02 h6 { width:34.375vw;}
+.vspc .main .BOX03 > div .TBOX .TEXT02 p { padding:1.5625vw 0;}
+.vspc .main .BOX03 > div .CTA,
+.vspc .main .BOX03 > div:nth-child(even) .CTA { right:3.125vw; bottom:-2.8125vw; width:calc(100% - 6.25vw); left:auto;}
+.vspc .main .CTA a { box-sizing:border-box; width:100%; padding:2.34375vw; font-size:3.75vw;}
+.vspc .main .CTA a:after { width:6vw; height:3.34375vw; top:-0.3125vw;}
+
+.vspc .main .BOX03 > div:nth-child(even) .PS { width:48.125vw; height:61.71875vw; right:3.125vw; top:9.375vw;}
+.vspc .main .BOX03 > div:nth-child(even) .PS:before { width:23.4375vw; height:23.4375vw; right:3.125vw; top:-7.8125vw;}
+.vspc .main .BOX03 > div:nth-child(even) .PS:after { display:none;}
+
+
+/* BOX05--------------------------- */
+.vspc .main .BOX05 { background-position:center 7.8125vw; padding-bottom:3.125vw;}
+.vspc .main .BOX05 > div { width:calc(100% - 6.25vw); height:auto; margin-bottom:3.125vw;}
+.vspc .main .BOX05 > div .IMG,
+.vspc .main .BOX05 > div:nth-child(even) .IMG { width:100%; border-radius:0 7.8125vw 0 0; float:none;}
+.vspc .main .BOX05 > div .IMG span:after,
+.vspc .main .BOX05 > div:nth-child(even) .IMG span:after { width:calc(100% - 6.25vw); height:calc(100% - 6.25vw); border-radius:0 7.8125vw 0 0; left:3.125vw; top:3.125vw;}
+.vspc .main .BOX05 > div .TBOX,
+.vspc .main .BOX05 > div:nth-child(even) .TBOX { width:calc(100% - 6.25vw); height:auto; margin:0 auto; padding:7.8125vw; position:relative; left:auto; top:-3.28125vw;}
+.vspc .main .BOX05 > div .TBOX .TITLE { margin-bottom:1.5625vw;}
+.vspc .main .BOX05 > div .TBOX .TITLE span { font-size:7.5vw; letter-spacing:0.3125vw;}
+.vspc .main .BOX05 > div .TBOX .SUBTITLE { margin-bottom:1.5625vw;}
+.vspc .main .BOX05 > div .TBOX .SUBTITLE span { letter-spacing:1.5625vw;}
+.vspc .main .BOX05 > div .TBOX .TEXT { margin-bottom:6.25vw;}
+.vspc .main .BOX05 > div .TBOX .CTA { bottom:0}
+.vspc .main .BOX05 > div .TBOX .CTA { width:100%;}
+
+}
+</style>
+
+<!-- ============================================================================================================
+.................................................. DOM_主體架構 ................................................
+==============================================================================================================-->
+<!-- 主視覺開始 -------------------------------------------------->
+<div class="vspc">
+    <!-- LOGO -->
+    <div class="LOGO">
+    <a href="https://shopping.udn.com/mall/Cc1a00.do" target="_blank" class="udnLOGO"><span></span></a>
+    </div>
+    <!-- LOGO END -->
+  <!-- 版頭區塊_main_start -->
+  <div class="main">
+    
+    <!-- 主視覺 -->
+    <div class="TOP">
+      <div class="TITLE_M"><span><img src="images/TITLE_M.png" alt="What kind of Coffee do you like？ 5款咖啡測出你的個性"></span></div>
+      <div class="TITLE_W"><span><img src="images/TITLE_W.png" alt="What kind of Coffee do you like？ 5款咖啡測出你的個性"></span></div>
+      <div class="TEXT">
+        <p>爵士音樂搭配著手沖咖啡聲，這是小編我開啟一天的日常習慣，沒錯！咖啡上癮者如我，每天早晨都要來上一杯，才能讓渾沌的腦清醒。<br/>
+          你問我從什麼時候開始？老實說我也不記得了，只知道若沒有喝上一杯咖啡，就會覺得當天不對勁，你也跟我一樣嗎？<br/>
+          今天來分享前陣子看的咖啡心理測驗，蠻有趣的！原來我們每天習慣喝的咖啡種類，也能簡單剖析你的個性。<br/>
+          <strong>快來看看 ~ 以下 5 種咖啡，哪杯是你最愛喝的咖啡種類呢？</strong><br/>
+        </p>
+      </div>
+    </div>
+    <!-- 主視覺 END -->
+    
+    <!-- BOX01 咖啡測驗 -->
+    <div class="BOXBG BOX01">
+    <div>
+    
+      <div class="P01">
+        <div class="IMG"><span><img src="images/BOX01_WP01.jpg" alt="放在木托盤上的眼鏡和美式咖啡"></span></div>
+        <div class="TITLE">
+          <i></i><h6></h6>
+<span>美式咖啡</span></div>
+        <div class="TEXT">
+          <p>美式咖啡不加糖、不加奶，喜好這類咖啡的你，喜好分明、直來直往，且美式咖啡的苦，常常也是一般人無法享受的，能品嘗其中的你，想法成熟、也比較有個性，對事情總有自己獨到的看法，有時易堅持己見、較主觀，處理事情上，不喜歡複雜，一切簡單直接就好。</p>
+        </div>
+      </div>
+      
+      <div class="P02">
+        <div class="IMG"><span><img src="images/BOX01_WP02.jpg" alt="放在陶瓷墊上的拿鐵和巧克力貝果"></span></div>
+        <div class="TITLE">
+          <i></i><h6></h6>
+<span class="WP">拿鐵<b>/</b>卡布奇諾</span><span class="MP">拿鐵<br/>卡布奇諾</span></div>
+        <div class="TEXT">
+          <p>拿鐵或卡布奇諾，喜愛這類在咖啡苦味中加入了牛奶潤滑的你，就像顆圓滑的石頭，經歷過長期的磨練，個性沉穩、喜歡與人交際、吸取新知，且愛喝這類咖啡的你，本身樂觀正向、善於傾聽他人煩惱，總能適時的給予別人關懷及照顧，你根本就是暖男暖女代表。對於生活，喜歡追求舒適的品質，喜歡藉由買東西來彌補一成不變生活的空虛感。</p>
+        </div>
+      </div>
+      
+      <div class="P03">
+        <div class="IMG"><span><img src="images/BOX01_WP03.jpg" alt="在冰豆漿中倒入咖啡製成冰拿鐵豆奶"></span></div>
+        <div class="TITLE">
+          <i></i><h6></h6>
+<span>健康咖啡<br/>
+          <samp>(低咖啡因、添加豆漿)</samp></span></div>
+        <div class="TEXT">
+          <p>喜歡這類健康特調的你，重視自我管理、對自我要求高，遵守各項秩序規則，也因為對自我要求高，很看重事情的所有細節，容易有焦慮的情形發生；在生活方面控制慾較強，會希望計畫都照自己安排的進行，甚至可以說，你還蠻享受一個人的生活，清楚知道自己想要跟不要的是什麼，對自己的未來有充分、明確的規劃。</p>
+        </div>
+      </div>
+      
+      <div class="P04">
+        <div class="IMG"><span><img src="images/BOX01_WP04.jpg" alt="在散落咖啡豆桌上放了3杯加了鮮奶油的特調咖啡"></span></div>
+        <div class="TITLE">
+          <i></i><h6></h6>
+<span>特調咖啡<br/>
+          <samp>(摩卡星冰樂、添加調酒)</samp></span></div>
+        <div class="TEXT">
+          <p>難以想像加了調酒的咖啡是什麼樣的味道，但你正喜歡這種未知的挑戰，像個孩子般，喜歡嘗試各種新奇事物，行動力強，想做什麼就會馬上執行、不拖泥帶水，腦袋靈活、想像力豐富，對事情抱持開放心態，個性外向、不耍心機，易與人打成一片，人緣不錯。</p>
+        </div>
+      </div>
+      
+      <div class="P05">
+        <div class="IMG"><span><img src="images/BOX01_WP05.jpg" alt="將三合一即溶咖啡倒入咖啡杯中"></span></div>
+        <div class="TITLE">
+          <i></i><h6></h6>
+<span>即溶咖啡</span></div>
+        <div class="TEXT">
+          <p>選擇即溶咖啡的你，沒有特定的喜好，個性上灑脫豪邁、隨遇而安，處事上不拘小節、不喜與人競爭，覺得偌大世界，總有能容你安身之處，這方面使得你能自在、快速融入不同群體。但有時太過鬆散的態度，易給人拖延、不善規劃的形象。</p>
+        </div>
+      </div>
+      
+      <div class="PS">
+        <div class="IMG"><span></span></div>
+        <div class="TEXT">
+          <p>看完以上分析，小編要強調這跟一般心理測驗一樣，不可能 100% 準確，<br/>
+            若覺得不準，就當是茶餘飯後有趣的話題吧！</p>
+        </div>
+      </div>
+      
+    </div>
+    </div>
+    <!-- BOX01 咖啡測驗 END -->
+    
+    <!-- BOX02 -->
+    <div class="BOXBG BOX02">
+      <div class="PS">
+        <hr>
+        <div class="TEXT">
+          <p>小編看完上面的心理測驗，口都渴了！<br/>
+            你是不是也很想馬上來煮杯咖啡品嘗看看呢？<br/>
+            接著跟你分享<strong> 7 種咖啡煮法</strong>，看你最想喝的是哪種。</p>
+        </div>
+      </div>
+    </div>
+    <!-- BOX02 END -->
+    
+    <!-- BOX03 咖啡煮法 -->
+    <div class="BOXBG BOX03">
+    
+      <div class="P01">
+        <div class="PS"></div>
+        <div class="IMG"><span><img class="WP" src="images/BOX03_WP01.jpg" alt="摩卡壺下層和旁邊的湯匙放入咖啡粉"><img class="MP" src="images/BOX03_MP01.jpg" alt="摩卡壺下層和旁邊的湯匙放入咖啡粉"></span></div>
+        <div class="TBOX">
+        <div class="TITLE"><span>摩卡壺</span></div>
+          <div class="TEXT01">
+            <p>因為溫度跟咖啡粉的比例都高，且利用高壓蒸氣烹煮，煮出的咖啡較濃較苦，但如果你偏愛道地的義式風味，小編推薦你這款！</p>
+          </div>
+          <div class="STAR">
+            <h6>使用難易度：</h6>
+            <ul>
+              <li class="S01"><span></span></li>
+              <li class="S01"><span></span></li>
+              <li class="S01"><span></span></li>
+              <li class="S02"><span></span></li>
+              <li><span></span></li>
+            </ul>
+          </div>
+          <div class="TEXT02">
+            <h6></h6>
+            <p>若不想喝太苦，咖啡豆建議不用磨太細，苦味就不會過分萃取；另外因為用火爐直接加熱，煮完後金屬部分非常燙，小心燙手！</p>
+          </div>
+        </div>
+        <div class="CTA"><a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=H_003_001_003" target="_blank">看更多推薦</a></div>
+      </div>
+    
+      <div class="P02">
+        <div class="PS"></div>
+        <div class="IMG"><span><img class="WP" src="images/BOX03_WP02.jpg" alt="在窗前的木托盤上放著法壓壺和咖啡杯"><img class="MP" src="images/BOX03_MP02.jpg" alt="在窗前的木托盤上放著法壓壺和咖啡杯"></span></div>
+        <div class="TBOX">
+        <div class="TITLE"><span>法壓壺<b>/</b>濾壓壺</span></div>
+          <div class="TEXT01">
+            <p>最早是用作沖泡紅茶，所以也有人稱它為沖茶器，非常方便的浸泡式煮法，可直接透視萃取的過程，作法是直接將咖啡粉與熱水燜壓在一起，釋放出咖啡的精華風味。</p>
+          </div>
+          <div class="STAR">
+            <h6>使用難易度：</h6>
+            <ul>
+              <li class="S01"><span></span></li>
+              <li class="S02"><span></span></li>
+              <li><span></span></li>
+              <li><span></span></li>
+              <li><span></span></li>
+            </ul>
+          </div>
+          <div class="TEXT02">
+            <h6></h6>
+            <p>壺中間的金屬濾網間隙較大，建議咖啡豆不要磨太細，以免濾出後容易喝到咖啡渣；因為像泡茶一樣，必須要有熱水，要不然無法浸泡燜煮。</p>
+          </div>
+        </div>
+        <div class="CTA"><a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=H_003_001_005" target="_blank">看更多推薦</a></div>
+      </div>
+    
+      <div class="P03">
+        <div class="PS"></div>
+        <div class="IMG"><span><img class="WP" src="images/BOX03_WP03.jpg" alt="將剛煮好的美式咖啡從下方玻璃製的咖啡壺倒到咖啡杯中"><img class="MP" src="images/BOX03_MP03.jpg" alt="將剛煮好的美式咖啡從下方玻璃製的咖啡壺倒到咖啡杯中"></span></div>
+        <div class="TBOX">
+        <div class="TITLE"><span>美式滴漏機</span></div>
+          <div class="TEXT01">
+            <p>類似義式咖啡機，差別在於沒有壓力沖煮，沖出來的是濃度較淡的美式咖啡，模擬手沖，熱水由上淋在咖啡粉後滴漏到下層的玻璃或陶瓷製咖啡壺，適合無法用火加熱的地方，咖啡量充分夠2~3人飲用。</p>
+          </div>
+          <div class="STAR">
+            <h6>使用難易度：</h6>
+            <ul>
+              <li class="S01"><span></span></li>
+              <li><span></span></li>
+              <li><span></span></li>
+              <li><span></span></li>
+              <li><span></span></li>
+            </ul>
+          </div>
+          <div class="TEXT02">
+            <h6></h6>
+            <p>熱水出水孔建議選用非塑料材質，以免長期飲用有礙健康；若選用單一出水口，注水較不溫和，口感不夠醇厚。</p>
+          </div>
+        </div>
+        <div class="CTA"><a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=T_001_015_007_006" target="_blank">看更多推薦</a></div>
+      </div>
+    
+      <div class="P04">
+        <div class="PS"></div>
+        <div class="IMG"><span><img class="WP" src="images/BOX03_WP04.jpg" alt="在咖啡吧台上的虹吸壺"><img class="MP" src="images/BOX03_MP04.jpg" alt="在咖啡吧台上的虹吸壺"></span></div>
+        <div class="TBOX">
+        <div class="TITLE"><span>虹吸壺</span></div>
+          <div class="TEXT01">
+            <p>用虹吸壺煮如同一場精采的化學實驗，上壺裝咖啡粉、下壺裝水，水經過加熱後順著玻璃管推到上壺，滾煮這期間即可以攪拌棒攪拌，將咖啡粉與水融合，火關掉，待下壺冷卻後，沖煮的咖啡就再被吸回下壺，之後拔開上壺即可倒出飲用，要煮的到位，難度頗高。</p>
+          </div>
+          <div class="STAR">
+            <h6>使用難易度：</h6>
+            <ul>
+              <li class="S01"><span></span></li>
+              <li class="S01"><span></span></li>
+              <li class="S01"><span></span></li>
+              <li class="S01"><span></span></li>
+              <li><span></span></li>
+            </ul>
+          </div>
+          <div class="TEXT02">
+            <h6></h6>
+            <p>如同實驗般的沖煮，水溫、咖啡粉粗細、攪拌程度在在都會影響其口感；另外下方把水加熱的瓦斯要注意是否需要補充，怕火的朋友，瓦斯還是要謹慎使用。</p>
+          </div>
+        </div>
+        <div class="CTA"><a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=H_003_001_004" target="_blank">看更多推薦</a></div>
+      </div>
+    
+      <div class="P05">
+        <div class="PS"></div>
+        <div class="IMG"><span><img class="WP" src="images/BOX03_WP05.jpg" alt="從自動咖啡機滴漏下煮好的濃縮咖啡到咖啡杯中"><img class="MP" src="images/BOX03_MP05.jpg" alt="從自動咖啡機滴漏下煮好的濃縮咖啡到咖啡杯中"></span></div>
+        <div class="TBOX">
+        <div class="TITLE"><span>自動咖啡機</span></div>
+          <div class="TEXT01">
+            <p>自動咖啡機分為半自動和全自動。半自動是玩家級首選，可依照喜好的口感，填充咖啡粉，有的還附有打奶泡功能；全自動如同名稱，只需一鍵按下，機器採高壓蒸氣和水快速穿過咖啡粉層，瞬間萃取出咖啡精華，使得雜質含量不高，口感相當醇厚，輕鬆沖煮出所謂的義式Espresso咖啡。</p>
+          </div>
+          <div class="STAR">
+            <h6>使用難易度：</h6>
+            <ul>
+              <li class="S01"><span></span></li>
+              <li><span></span></li>
+              <li><span></span></li>
+              <li><span></span></li>
+              <li><span></span></li>
+            </ul>
+          </div>
+          <div class="TEXT02">
+            <h6></h6>
+            <p>想玩花式咖啡，拿鐵、卡布奇諾，都可以用義式咖啡做基底，創作更多不同風味；不鏽鋼機體，清洗擦拭超方便。</p>
+          </div>
+        </div>
+        <div class="CTA"><a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=T_001_015_001" target="_blank">看更多推薦</a></div>
+      </div>
+    
+      <div class="P06">
+        <div class="PS"></div>
+        <div class="IMG"><span><img class="WP" src="images/BOX03_WP06.jpg" alt="濃縮瑪奇朵咖啡從膠囊咖啡機煮好"><img class="MP" src="images/BOX03_MP06.jpg" alt="濃縮瑪奇朵咖啡從膠囊咖啡機煮好"></span></div>
+        <div class="TBOX">
+        <div class="TITLE"><span>膠囊咖啡機</span></div>
+          <div class="TEXT01">
+            <p>簡單3步驟，膠囊打開、放進去、咖啡機按鈕一按，沒錯~膠囊咖啡機就這麼簡單！一杯好咖啡要顧慮的因素實在多不可數，水溫、水量、咖啡粉質地、咖啡粉顆粒粗細等，為了可更快速品嘗美味咖啡，且避免咖啡長時間暴露空氣中會氧化、變質，膠囊咖啡將一切要顧慮的因素統一標準，你任何時刻都可以飲用始終如一的好味道。</p>
+          </div>
+          <div class="STAR">
+            <h6>使用難易度：</h6>
+            <ul>
+              <li class="S01"><span></span></li>
+              <li class="S02"><span></span></li>
+              <li><span></span></li>
+              <li><span></span></li>
+              <li><span></span></li>
+            </ul>
+          </div>
+          <div class="TEXT02">
+            <h6></h6>
+            <p>膠囊口味是經過多項測試濃縮包裝，所以煮出來的味道都相同，不適合想體驗煮咖啡樂趣及飲用不同風味的你。</p>
+          </div>
+        </div>
+        <div class="CTA"><a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=T_001_015_004" target="_blank">看更多推薦</a></div>
+      </div>
+    
+      <div class="P07">
+        <div class="PS"></div>
+        <div class="IMG"><span><img class="WP" src="images/BOX03_WP07.jpg" alt="將細口壺的熱水到在濾紙上，濾出咖啡"><img class="MP" src="images/BOX03_MP07.jpg" alt="將細口壺的熱水到在濾紙上，濾出咖啡"></span></div>
+        <div class="TBOX">
+        <div class="TITLE"><span>手沖壺<samp>/</samp>細口壺</span></div>
+          <div class="TEXT01">
+            <p>小編最喜歡的就是手沖了！磨好咖啡豆，將咖啡豆放入濾紙中，在細口壺中放入需要注入的熱水，水溫越高，咖啡萃取的速度越快，第一次聽著細口壺流出的熱水悶蒸著咖啡粉，等水流下去後，第二次就要注意萃取的時間，水量足夠後即可停止。雖然整段步驟繁瑣，但等待沖煮的期間，我很享受彷彿只有我跟咖啡空間般的寧靜。</p>
+          </div>
+          <div class="STAR">
+            <h6>使用難易度：</h6>
+            <ul>
+              <li class="S01"><span></span></li>
+              <li class="S01"><span></span></li>
+              <li class="S01"><span></span></li>
+              <li><span></span></li>
+              <li><span></span></li>
+            </ul>
+          </div>
+          <div class="TEXT02">
+            <h6></h6>
+            <p>要注意沖煮的熱水，溫度過高咖啡會較苦，可依照咖啡豆的烘焙度以及個人喜好的味道調整水的溫度。</p>
+          </div>
+        </div>
+        <div class="CTA"><a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=H_003_003_005" target="_blank">看更多推薦</a></div>
+      </div>
+      
+    </div>
+    <!-- BOX03 咖啡煮法 END -->
+    
+    <!-- BOX04 -->
+    <div class="BOXBG BOX04">
+      <div class="PS">
+        <hr>
+        <div class="TEXT">
+          <p>最後別忘了，<span>咖啡的主角<i></i><strong>咖啡種類</strong>，</span>任你快速挑選</p>
+        </div>
+      </div>
+    </div>
+    <!-- BOX04 END -->
+    
+    <!-- BOX05 咖啡種類 -->
+    <div class="BOXBG BOX05">
+    
+      <div class="P01">
+        <div class="IMG"><span><img src="images/BOX05_WP01.jpg" alt="很多咖啡豆為背景，特寫其中咖啡豆"></span></div>
+        <div class="TBOX">
+          <div class="TITLE"><span>咖啡豆</span></div>
+          <div class="SUBTITLE"><span>Coffee bean</span></div>
+          <div class="TEXT">
+            <p>隨著烘焙時間的長短，多少也會影響咖啡的風味以及咖啡因的比例。烘焙時間愈長，酸味會逐漸降低、苦味提升、咖啡因的比例反而降低，所以若想品嚐偏酸的風味，可挑選淺焙的咖啡豆，若喜歡濃醇回甘的咖啡苦味，則可挑選中深焙豆。</p>
+          </div>
+          <div class="CTA"><a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=J_012_004_003" target="_blank">看更多推薦</a></div>
+        </div>
+      </div>
+    
+      <div class="P02">
+        <div class="IMG"><span><img src="images/BOX05_WP02.jpg" alt="木台上有杯濾掛咖啡正濾出咖啡"></span></div>
+        <div class="TBOX">
+          <div class="TITLE"><span>濾掛咖啡<b>/</b>掛耳咖啡</span></div>
+          <div class="SUBTITLE"><span>Instant drip coffee bag</span></div>
+          <div class="TEXT">
+            <p>沖煮濾掛咖啡不需磨咖啡豆，也不需要沖煮的器具在旁邊，其集結即溶咖啡的快速但同時又可以享受手沖的樂趣，只需要適量的熱水和一個杯子，非常方便。挑選方式跟咖啡豆一樣，依照你喜歡的風味選擇。</p>
+          </div>
+          <div class="CTA"><a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=J_012_004_060_002" target="_blank">看更多推薦</a></div>
+        </div>
+      </div>
+    
+      <div class="P03">
+        <div class="IMG"><span><img src="images/BOX05_WP03.jpg" alt="農夫正在挑選有機咖啡豆"></span></div>
+        <div class="TBOX">
+          <div class="TITLE"><span>有機咖啡豆</span></div>
+          <div class="SUBTITLE"><span>Organic coffee bean</span></div>
+          <div class="TEXT">
+            <p>有機咖啡豆沒有使用農藥，採用有機栽種，或許在飲用的當下，可以間接友善我們的環境、愛護地球。</p>
+          </div>
+          <div class="CTA"><a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=J_012_004_005" target="_blank">看更多推薦</a></div>
+        </div>
+      </div>
+    
+      <div class="P04">
+        <div class="IMG"><span><img src="images/BOX05_WP04.jpg" alt="在已放入即溶咖啡粉的咖啡杯中倒入熱水"></span></div>
+        <div class="TBOX">
+          <div class="TITLE"><span>即溶咖啡</span></div>
+          <div class="SUBTITLE"><span>Instant coffee</span></div>
+          <div class="TEXT">
+            <p>即溶沖泡的特色在於可依照個人口味調整濃淡，有分罐裝和隨身包，想喝濃一點，罐裝的咖啡粉可以多加點，但容易因蓋子開關、接觸空氣而受潮變質，隨身包可方便攜帶，且咖啡粉較不易變質，但要多加個2~3包濃度才會增加，價格計算下來，飲用量較大的人比較適合罐裝，若常常外出需要補充咖啡，隨身包會是不錯的選擇。</p>
+          </div>
+          <div class="CTA"><a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=J_012_004_002" target="_blank">看更多推薦</a></div>
+        </div>
+      </div>
+    
+      <div class="P05">
+        <div class="IMG"><span><img src="images/BOX05_WP05.jpg" alt="桌上放了一匙咖啡豆、一匙椰子油、一匙奶油，以及一杯防彈咖啡"></span></div>
+        <div class="TBOX">
+          <div class="TITLE"><span>防彈咖啡</span></div>
+          <div class="SUBTITLE"><span>Bulletproof coffee</span></div>
+          <div class="TEXT">
+            <p>有陣子大家廣為宣傳防彈咖啡，其製作方式依自己喜好的咖啡搭配椰子油或者無鹽奶油，對於短期想減重、減脂，再配合飲食控制和規律運動，效果是不錯的，但不建議長期飲用，以免造成營養攝取不均衡。</p>
+          </div>
+          <div class="CTA"><a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=J_012_004_063" target="_blank">看更多推薦</a></div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- BOX05 咖啡種類 END -->
+    
+    <!-- BOX06 -->
+    <div class="BOXBG BOX06">
+      <div class="PS">
+        <hr>
+        <div class="TITLE"><span class="WP">不只是<strong>咖啡</strong>，還是一種生活態度</span><span class="MP">不只是<strong>咖啡</strong>，<br/>還是一種生活態度</span></div>
+        <div class="TEXT">
+          <p>常有朋友會問小編我，為何這麼苦的東西你喝的下去？<br/>
+因為我喝的不只是一杯咖啡，<br/>
+咖啡生豆處理方式的不同，種類、產地差異，<br/>
+咖啡豆烘焙者的製作差異，再再能體會到不同的生活態度，<br/>
+透過品嚐不同口味的咖啡，也可感受到不一樣的文化，<br/>
+咖啡不單單只是你想像苦而已，它還能帶給你不同層次的感受，<br/>
+<strong>來一杯咖啡吧！或許你也能發現咖啡美好的一面。</strong>
+</p>
+        </div>
+      </div>
+    </div>
+    <!-- BOX04 END -->
+    
+  </div>
+  <!-- 版頭區塊_main_end -->
+
+</div>
+<!-- 主視覺結束 -------------------------------------------------->
+<!-- =============================================================================================================
+..................................................GO TOP....................................................
+============================================================================================================== -->
+<div class="goTop" id="backtop"><span><i class="fas fa-angle-up"></i></span></div>
